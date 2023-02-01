@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <style>
+      /* All Your css here  */
+    </style>
+  </head>
+
+  <body>
+    <div class="nav">
+      <h1>Masai Country Records</h1>
+      <a href="./index.html">Home</a>
+      <a href="./visited.html">Visited</a>
+    </div>
+    <select id="sort">
+      <option value="">Sort By Population</option>
+      <option value="asc">Ascending</option>
+      <option value="desc">Descending</option>
+    </select>
+    <form>
+      <input type="text" placeholder="Search" id="search" />
+      <input type="submit" value="Search" />
+    </form>
+    <table border="1" cellspacing="0">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Country</th>
+          <th>Rank</th>
+          <th>Population</th>
+          <th>Visited</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Here all rows will be appended  -->
+      </tbody>
+    </table>
+  </body>
+  <script>
+    // Write all JS here
+    let tbodyEl = document.querySelector("tbody");
+    let formEl = document.querySelector("form");
+    let sortFilterEl = document.getElementById("sort");
+
+
+    const url = `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-countries`;
+
+    let fetchData = [];
+    let visitedData = JSON.parse(localStorage.getItem('visited')) || [];
+
+    fetch(url)
+    .then( (res) => res.json())
+    .then( (data) => {
+      fetchData = data.data;
+      console.log(fetchData);
+      displayCountry(fetchData);
+    })
+    
+    formEl.addEventListener("submit", (event) => {
+      event.preventDefault();
+      let filterdData = fetchData.filter((element) => element.country.toLowerCase().includes(formEl.search.value.toLowerCase()));
+      console.log(filterdData);
+      displayCountry(filterdData);
+    })
+
+    sortFilterEl.addEventListener("change",()=> {
+      let sortIn = ""
+      if(sortFilterEl.value=="asc") sortIn = "asc"
+      else if(sortFilterEl.value=="desc") sortIn="desc"
+      if(sortIn){
+        fetch(`https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-countries?sort=population&&order=${sortIn}`)
+        .then(res => res.json())
+        .then((data) => displayCountry(data.data))
+      }else{
+        displayCountry(fetchData);
+      }
+    })
+
+
+    function displayCountry(data){
+      tbodyEl.innerHTML = "";
+      data.forEach((element,index) => {
+        let tr = document.createElement("tr");
+        let td1 = document.createElement("td");
+        td1.innerText = element.id;
+        let td2 = document.createElement("td");
+        td2.innerText = element.country;
+        let td3 = document.createElement("td");
+        td3.innerText = element.Rank;
+        let td4 = document.createElement("td");
+        td4.innerText = element.population;
+        let td5 = document.createElement("td");
+        td5.innerText = "Visit";
+        td5.style.backgroundColor="red"
+
+        td5.addEventListener("click", ()=> {
+          visitedData.push(element);
+          localStorage.setItem('visited', JSON.stringify(visitedData));
+        })
+
+        tr.append(td1,td2,td3,td4,td5);
+        tbodyEl.append(tr);
+      })
+    }
+  </script>
+</html>

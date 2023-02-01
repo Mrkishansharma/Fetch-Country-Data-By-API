@@ -1,0 +1,205 @@
+{
+    "apiData": {
+        "data": [
+            {
+                "country": "France",
+                "id": 1,
+                "Rank": 22,
+                "population": 64938716
+            },
+            {
+                "country": "Tonga",
+                "id": 2,
+                "Rank": 181,
+                "population": 107797
+            },
+            {
+                "country": "Tuvalu",
+                "id": 3,
+                "Rank": 194,
+                "population": 9975
+            },
+            {
+                "country": "Malta",
+                "id": 4,
+                "Rank": 168,
+                "population": 420521
+            },
+            {
+                "country": "Estonia",
+                "id": 5,
+                "Rank": 152,
+                "population": 1305755
+            },
+            {
+                "country": "Tajikistan",
+                "id": 6,
+                "Rank": 93,
+                "population": 8858115
+            },
+            {
+                "country": "Thailand",
+                "id": 7,
+                "Rank": 20,
+                "population": 68297547
+            },
+            {
+                "country": "Vanuatu",
+                "id": 8,
+                "Rank": 174,
+                "population": 276331
+            },
+            {
+                "country": "Solomon Islands",
+                "id": 9,
+                "Rank": 163,
+                "population": 606215
+            },
+            {
+                "country": "El Salvador",
+                "id": 10,
+                "Rank": 108,
+                "population": 6167147
+            },
+            {
+                "country": "Pakistan",
+                "id": 11,
+                "Rank": 6,
+                "population": 196744376
+            },
+            {
+                "country": "U.K.",
+                "id": 12,
+                "Rank": 21,
+                "population": 65511098
+            },
+            {
+                "country": "Algeria",
+                "id": 13,
+                "Rank": 35,
+                "population": 41063753
+            },
+            {
+                "country": "San Marino",
+                "id": 14,
+                "Rank": 191,
+                "population": 32104
+            },
+            {
+                "country": "Uzbekistan",
+                "id": 15,
+                "Rank": 45,
+                "population": 30690914
+            },
+            {
+                "country": "Cameroon",
+                "id": 16,
+                "Rank": 54,
+                "population": 24513689
+            },
+            {
+                "country": "Sudan",
+                "id": 17,
+                "Rank": 33,
+                "population": 42166323
+            },
+            {
+                "country": "Chad",
+                "id": 18,
+                "Rank": 72,
+                "population": 14965482
+            },
+            {
+                "country": "Gabon",
+                "id": 19,
+                "Rank": 148,
+                "population": 1801232
+            },
+            {
+                "country": "Cambodia",
+                "id": 20,
+                "Rank": 70,
+                "population": 16076370
+            }
+        ],
+        "totalPages": 1
+    },
+    "filter1": [
+        {
+            "country": "Cameroon",
+            "id": 16,
+            "Rank": 54,
+            "population": 24513689
+        },
+        {
+            "country": "Cambodia",
+            "id": 20,
+            "Rank": 70,
+            "population": 16076370
+        }
+    ],
+    "filter2": [
+        {
+            "country": "France",
+            "id": 1,
+            "Rank": 22,
+            "population": 64938716
+        }
+    ],
+    "filter3": [
+        {
+            "country": "Tonga",
+            "id": 2,
+            "Rank": 181,
+            "population": 107797
+        },
+        {
+            "country": "Tuvalu",
+            "id": 3,
+            "Rank": 194,
+            "population": 9975
+        },
+        {
+            "country": "Malta",
+            "id": 4,
+            "Rank": 168,
+            "population": 420521
+        },
+        {
+            "country": "Estonia",
+            "id": 5,
+            "Rank": 152,
+            "population": 1305755
+        },
+        {
+            "country": "Tajikistan",
+            "id": 6,
+            "Rank": 93,
+            "population": 8858115
+        },
+        {
+            "country": "Thailand",
+            "id": 7,
+            "Rank": 20,
+            "population": 68297547
+        },
+        {
+            "country": "Vanuatu",
+            "id": 8,
+            "Rank": 174,
+            "population": 276331
+        },
+        {
+            "country": "Pakistan",
+            "id": 11,
+            "Rank": 6,
+            "population": 196744376
+        },
+        {
+            "country": "Uzbekistan",
+            "id": 15,
+            "Rank": 45,
+            "population": 30690914
+        }
+    ]
+}
